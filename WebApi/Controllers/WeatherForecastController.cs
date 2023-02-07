@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics.CodeAnalysis;
 
 namespace WebApi.Controllers
 {
@@ -28,6 +29,21 @@ namespace WebApi.Controllers
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]
             })
             .ToArray();
+        }
+    }
+
+    public class MyClass
+    {
+        [ExcludeFromCodeCoverage(Justification = "Registration")]
+        /// <inheritdoc cref="IIconWebApplicationBuilder"/>
+        public void Add()
+        {
+
+        }
+
+        public void Subtract()
+        {
+
         }
     }
 }
