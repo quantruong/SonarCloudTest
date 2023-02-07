@@ -34,16 +34,16 @@ namespace WebApi.Controllers
 
     public class MyClass
     {
-        [ExcludeFromCodeCoverage(Justification = "Registration")]
         /// <inheritdoc cref="IIconWebApplicationBuilder"/>
+        [ExcludeFromCodeCoverage(Justification = "Registration")]
         public void Add()
         {
-
+            throw new NotSupportedException();
         }
 
         public void Subtract()
         {
-
+            throw new NotImplementedException();
         }
     }
 }
