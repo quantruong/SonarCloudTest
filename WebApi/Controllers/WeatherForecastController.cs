@@ -23,8 +23,7 @@ namespace WebApi.Controllers
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
-            var c = new Class1();
-            c.Test();
+            Class1.Test();
             return Enumerable.Range(1, 6).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
